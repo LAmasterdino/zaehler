@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dokumentation des POS Count Produktzählers.">
+  <title>Dokumentation – POS Count</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script defer src="./assets/js/site.js"></script>
+</head>
+
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">POS COUNT / DOKUMENTATION</span>
+        <h1>Alles auf einen <span class="text-accent">Blick.</span></h1>
+        <p>
+          Hier findest du die wichtigsten Informationen zur Bedienung,
+          zu den Zählerständen und zur Anpassung der Webseite.
+        </p>
+      </div>
+    </section>
+
+    <section class="docs-section section-padding">
+      <div class="container docs-layout">
+        <aside class="docs-sidebar">
+          <strong>INHALT</strong>
+          <a href="#uebersicht">Übersicht</a>
+          <a href="#bedienung">Bedienung</a>
+          <a href="#speicherung">Speicherung</a>
+          <a href="#anpassung">Webseite anpassen</a>
+          <a href="#github">GitHub Pages</a>
+        </aside>
+
+        <div class="docs-content">
+          <article id="uebersicht" class="docs-article">
+            <span class="docs-number">01</span>
+            <h2>Übersicht</h2>
+
+            <p>
+              POS Count ist eine einfache Demo zur Produktzählung.
+              Sie besitzt zwei unabhängige Zähler: Produkt A und Produkt B.
+              Beide Zählerstände werden auf dem LCD angezeigt.
+            </p>
+
+            <div class="docs-callout">
+              <strong>Hinweis</strong>
+              <p>
+                Der interaktive Zähler ist eine Browser-Demo. Er benötigt
+                keine Datenbank und kann direkt ausprobiert werden.
+              </p>
+            </div>
+          </article>
+
+          <article id="bedienung" class="docs-article">
+            <span class="docs-number">02</span>
+            <h2>Bedienung</h2>
+
+            <p>
+              Öffne die <a href="./index.html#demo">interaktive Demo</a>
+              und drücke einen der beiden gelben Knöpfe.
+            </p>
+
+            <ul class="docs-list">
+              <li>
+                <strong>Produkt A:</strong>
+                erhöht ausschließlich den Zähler von Produkt A.
+              </li>
+              <li>
+                <strong>Produkt B:</strong>
+                erhöht ausschließlich den Zähler von Produkt B.
+              </li>
+              <li>
+                <strong>Zähler zurücksetzen:</strong>
+                setzt beide Zähler nach einer Bestätigung auf null.
+              </li>
+            </ul>
+          </article>
+
+          <article id="speicherung" class="docs-article">
+            <span class="docs-number">03</span>
+            <h2>Speicherung der Zählerstände</h2>
+
+            <p>
+              Die Produktzähler verwenden den lokalen Browser-Speicher
+              (localStorage). Die Zählerstände bleiben damit normalerweise
+              auch nach dem Neuladen der Seite erhalten.
+            </p>
+
+            <p>
+              Die gespeicherten Werte sind an den jeweiligen Browser und
+              die Website gebunden. Sie werden nicht automatisch mit
+              anderen Besuchern oder Geräten synchronisiert.
+            </p>
+
+            <p>
+              Für eine gemeinsame, geräteübergreifende Produktzählung
+              wäre ein zusätzlicher Server oder eine Datenbank erforderlich.
+            </p>
+          </article>
+
+          <article id="anpassung" class="docs-article">
+            <span class="docs-number">04</span>
+            <h2>Webseite anpassen</h2>
+
+            <p>
+              Das Erscheinungsbild wird über
+              <code>assets/css/style.css</code> gesteuert.
+              Die Navigation wird zentral in
+              <code>assets/js/site.js</code> definiert.
+            </p>
+
+            <p>
+              Um einen neuen Menüpunkt hinzuzufügen, ergänze das Array
+              <code>NAV_LINKS</code> in dieser Datei um einen weiteren Eintrag.
+            </p>
+
+            <pre><code>{
+  label: "Neue Seite",
+  href: "./neue-seite.html",
+  pages: ["neue-seite.html"]
+}</code></pre>
+
+            <p>
+              Anschließend muss die entsprechende HTML-Datei im
+              Repository angelegt werden.
+            </p>
+          </article>
+
+          <article id="github" class="docs-article">
+            <span class="docs-number">05</span>
+            <h2>GitHub Pages</h2>
+
+            <p>
+              Lege die Dateien in einem GitHub-Repository ab.
+              Achte darauf, dass die Datei <code>index.html</code>
+              im veröffentlichten Verzeichnis liegt.
+            </p>
+
+            <ol class="docs-list">
+              <li>Öffne die Repository-Einstellungen auf GitHub.</li>
+              <li>Wähle im Menü den Bereich <strong>Pages</strong>.</li>
+              <li>Wähle als Quelle den Branch und Ordner mit den Webseiten-Dateien.</li>
+              <li>Speichere die Einstellungen und rufe die veröffentlichte URL auf.</li>
+            </ol>
+
+            <p>
+              Der externe Besucherzähler wird über
+              <a href="https://www.besucherzaehler-kostenlos.de/"
+                 target="_blank" rel="noopener noreferrer">
+                Besucherzähler-Kostenlos.de
+              </a>
+              eingebunden. Seine zentrale Konfiguration befindet sich in
+              <code>assets/js/visitor-counter.js</code>.
+            </p>
+          </article>
+
+          <div class="docs-bottom-link">
+            <a class="button button-primary" href="./index.html#demo">
+              Zur interaktiven Demo
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="footer-brand" href="./index.html">
+        <span class="mini-logo">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <strong>POS COUNT</strong>
+      </a>
+
+      <p>Einfach zählen. Klarer Überblick.</p>
+
+      <nav class="footer-links" aria-label="Footernavigation">
+        <a href="./docs.html">Dokumentation</a>
+        <a href="./impressum.html">Impressum</a>
+        <a href="./datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> POS Count</span>
+
+      <div class="visitor-counter">
+        <span>Besucher:</span>
+        <span class="visitor-counter-output">
+          <script src="./assets/js/visitor-counter.js"></script>
+        </span>
+      </div>
+
+      <span>Made for simple counting.</span>
+    </div>
+  </footer>
+</body>
+</html>
